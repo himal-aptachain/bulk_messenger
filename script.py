@@ -19,17 +19,10 @@ numbers = "P:/BulkMessenger/numbers.txt"
 with open(numbers) as file:
     for number in file:
         number = number.strip()  # preprocess line
+            
+#       (phoneNumber, messageToSend, timeWithinTheMEssageShouldBeSent, shouldTabClose?Boolean, timeAfterWhichTabClosesAfy=terSendingMessage)
         pywhatkit.sendwhatmsg_instantly(number, msg, 25, True, 2)
-        pywhatkit.sendwhats_image(number, image, caption, 60
-        , True, 2)
+      
+#       (phoneNumber, imageToSend ,messageToSend, timeWithinTheMEssageShouldBeSent, shouldTabClose?Boolean, timeAfterWhichTabClosesAfy=terSendingMessage)
+        pywhatkit.sendwhats_image(number, image, caption, 60, True, 2)
         print(number)
-
-
-# with open('D:/bulk_message/numbers.txt') as number:
-#     numbers = f.read().splitlines()
-
-# for number in  numbers:
-#     now=time.localtime()
-#     print(number)
-#     pywhatkit.sendwhatmsg(number, msg, now.tm_hour, now.tm_min)
-# syntax: phone number with country code, message, hour and minutes
